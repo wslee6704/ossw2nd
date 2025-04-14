@@ -29,7 +29,7 @@ def get_number(prompt):
 
 if __name__ == "__main__":
     # 사용자 입력
-    input1 = get_number("\n첫 번째 숫자를 입력하세요: ")
+    num1 = get_number("\n첫 번째 숫자를 입력하세요: ")
 
     while True:
         act = input("\n원하는 사칙연산 기호를 선택하세요 (+, -, *, /): ")
@@ -37,16 +37,17 @@ if __name__ == "__main__":
             break
         print("❌ 잘못된 연산자입니다. 다시 입력하세요!")
 
-    input2 = get_number("\n두 번째 숫자를 입력하세요: ")
+    num2 = get_number("\n두 번째 숫자를 입력하세요: ")
 
     # 연산 수행
     if act == "+":
-        result = plus(input1, input2)
+        result = plus(num1, num2)
     elif act == "-":
-        result = minus(input1, input2)
+        result = minus(num1, num2)
     elif act == "*":
-        result = mul(input1, input2)
+        result = mul(num1, num2)
     elif act == "/":
-        result = divide(input1, input2)
+        result = divide(num1, num2)
+    
 
     print(f"\n✅ 결과: {result}")
